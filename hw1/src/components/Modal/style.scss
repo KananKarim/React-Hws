@@ -1,0 +1,52 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    min-width: 300px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    animation: modalFadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-btn {
+    cursor: pointer;
+  }
+
+  &__body {
+    margin-top: 10px;
+  }
+
+  &__footer {
+    margin-top: 10px;
+  }
+}
